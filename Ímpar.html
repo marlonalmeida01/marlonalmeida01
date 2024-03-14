@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Sorteio de Números Ímpares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        #resultado {
+            font-size: 36px;
+            /* Tamanho de fonte maior para o resultado */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jogo de Sorteio de Números Ímpares</h1>
+    <button onclick="sortearNumero()">Sortear Número Ímpar</button>
+    <div id="resultado"></div>
+    <h2>Números Sorteados:</h2>
+    <ul id="numerosSorteados"></ul>
+
+    <script>
+        var numerosSorteados = [];
+
+        function sortearNumero() {
+            var numero;
+            do {
+                numero = Math.floor(Math.random() * 36) * 2 + 1; // Gera um número ímpar entre 1 e 71
+            } while (numerosSorteados.includes(numero));
+
+            numerosSorteados.push(numero);
+            document.getElementById('resultado').innerHTML = 'Número sorteado: ' + numero;
+            exibirNumerosSorteados();
+        }
+
+        function exibirNumerosSorteados() {
+            var listaNumerosSorteados = document.getElementById('numerosSorteados');
+            listaNumerosSorteados.innerHTML = '';
+
+            for (var i = 0; i < numerosSorteados.length; i++) {
+                var li = document.createElement('li');
+                li.textContent = numerosSorteados[i];
+                listaNumerosSorteados.appendChild(li);
+            }
+        }
+    </script>
+</body>
+
+</html>
