@@ -6,8 +6,3 @@ analysis and systems development
 - 📫 Reach me via e-mail: marlonalmeida1114@gmail.com  
 - 😄 Pronouns: He/Him  
 - ⚡ Fun fact: I like watch YouTube and play some games on xbox, cellphone, etc.
-
-<!---
-marlonalmeida01/marlonalmeida01 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
